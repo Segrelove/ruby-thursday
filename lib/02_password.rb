@@ -1,3 +1,10 @@
+def signup
+    puts "Choisis un mot de passe"
+    print "> "
+    password = gets.chomp
+    return password
+end
+
 def login
     y = signup
         puts "Quel est ton mot de passe?"
@@ -11,13 +18,6 @@ def login
             puts "Mauvais Mot de Passe"
             result = "no"
         end
-end
-
-def signup
-    puts "Choisis un mot de passe"
-    print "> "
-    password = gets.chomp
-    return password
 end
 
 def welcome_screen

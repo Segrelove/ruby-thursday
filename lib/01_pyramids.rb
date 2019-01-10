@@ -30,20 +30,31 @@ def full_pyramid
     end
 end
 
-def reverse_pyramid
+def wtf_pyramid
     puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
     print "> "
     nb = gets.chomp.to_i
     i = 1
-    if nb >= 1 && nb <= 25 && nb % 2 != 0
-        while nb > i
+    if nb >= 1 && nb <= 25
+        while i <= nb/2
             print " " * (nb - i)
             i += 1
             puts "#" * (i - 1) + "#" * (i - 2)
         end
+
+        until i == 1
+            print " " * (nb - i)
+            i -= 1
+            puts "#" * (i - 1) + "#" * (i + 1)
+        end
+
     else
-        puts "fais Belek a toi 😡"
+        "fais Belek a toi 😡"
     end
 end
 
-reverse_pyramid
+half_pyramid
+
+full_pyramid
+
+wtf_pyramid

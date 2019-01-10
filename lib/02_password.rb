@@ -1,10 +1,3 @@
-def signup
-    puts "Choisis un mot de passe"
-    print "> "
-    password = gets.chomp
-    return password
-end
-
 def login
     y = signup
         puts "Quel est ton mot de passe?"
@@ -13,25 +6,33 @@ def login
 
         if x == y
             puts "Bien ouej"
-            return success
+            result = "yes"
         else
             puts "Mauvais Mot de Passe"
-            return failure
+            result = "no"
         end
 end
 
-# def welcome_screen
-#     x = login
+def signup
+    puts "Choisis un mot de passe"
+    print "> "
+    password = gets.chomp
+    return password
+end
 
-#     if x == true 
-#         puts "Bienvenue"
-#     else
-#         puts "BARRE TOI"
-#     end
-# end
+def welcome_screen
+    succes = login
+    if succes == "yes"
+        puts "Bienvenue, VOICI UNE LISTE DE TEXTO SUPER SYMPA"
+    elsif succes == "no"
+        puts "BARRE TOI"
+    else
+        puts "error"
+    end
+end
 
 def perform
-    login
+    welcome_screen
 end
 
 perform

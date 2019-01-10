@@ -7,8 +7,7 @@ if nb >= 1 && nb <= 25
         
         print " " * (nb - i)
         i += 1
-        puts "#" * (i - 1)
-        
+        puts "#" * (i - 1) + "#" * (i - 2)
     end
 else
     "fais Belek a toi 😡"

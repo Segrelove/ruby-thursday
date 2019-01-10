@@ -1,0 +1,3 @@
+Projet Jeudi - Ruby 
+
+w/ AMADOU GOLFA & MAXIME LE SEGRELOVE
